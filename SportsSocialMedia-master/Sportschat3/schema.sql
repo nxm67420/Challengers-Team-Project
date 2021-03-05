@@ -1,0 +1,39 @@
+
+DROP TABLE IF EXISTS favorite_player;
+CREATE TABLE favorite_player (
+user_name VARCHAR(255) NOT NULL,
+ player VARCHAR(255) NOT NULL,
+);
+
+DROP TABLE IF EXISTS favorite_team;
+CREATE TABLE favorite_team (
+user_name VARCHAR(255) NOT NULL,
+ team VARCHAR(255) NOT NULL,
+);
+
+
+DROP TABLE IF EXISTS message;
+CREATE TABLE message(
+id INT(25) NOT NULL AUTO_INCREMENT,
+message VARCHAR(255) NOT NULL,
+user_name VARCHAR(255) NOT NULL,
+PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS messages;
+CREATE TABLE messages(
+id INT(25) NOT NULL AUTO_INCREMENT,
+sender_name VARCHAR(255) NOT NULL,
+reciever_name VARCHAR(255) NOT NULL,
+message_text TEXT,
+date_time DATETIME,
+PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+id INT(11) NOT NULL AUTO_INCREMENT,
+user_name VARCHAR(255) NOT NULL,
+password VARCHAR(255) NOT NULL,
+PRIMARY KEY (id)
+);
